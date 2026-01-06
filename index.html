@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandra Brown | Product Developer</title>
+  <meta name="description" content="Chandra Brown – Product Developer specializing in end-to-end product lifecycle management, overseas manufacturing, and cost engineering." />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #7c83f5;
+      --border: #e5e7eb;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Source Sans 3', Calibri, Candara, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(79,70,229,0.12), transparent 40%),
+        radial-gradient(1000px 500px at 90% 10%, rgba(99,102,241,0.10), transparent 45%),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 60%);
+      line-height: 1.65;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Source Sans 3', Calibri, Candara, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4rem;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 4rem;
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(79,70,229,0.08), rgba(255,255,255,0.6));
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--card);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+      background: #e5e7eb;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .role {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 0.4rem;
+      letter-spacing: 0.01em;
+    }
+
+    .summary {
+      margin-top: 1rem;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle color accent stripe */
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), #a5b4fc);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 0 0 1.6rem;
+      position: relative;
+      font-weight: 600;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+      width: 44px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* ---------- Experience ---------- */
+    .job {
+      margin-bottom: 2.4rem;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .job .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin: 0.5rem 0 0;
+    }
+
+    li {
+      margin-bottom: 0.55rem;
+    }
+
+    /* ---------- Initiatives & Gallery ---------- */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .project {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .project img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #e5e7eb;
+    }
+
+    .project-content {
+      padding: 1.4rem 1.5rem 1.6rem;
+      display: block;
+    }
+
+    .project h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ---------- Skills ---------- */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 1.5rem 1rem 0;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 640px) {
+      header {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      header img {
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 2rem 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+
+    <header>
+      <img src="images/headshot.jpg" alt="Headshot of Chandra Brown" />
+      <div>
+        <h1>Chandra Brown</h1>
+        <div class="role">Product Developer</div>
+        <p class="summary">
+          Product Developer with end-to-end experience leading consumer products from concept through launch. Expertise in cross-functional collaboration, overseas manufacturing, cost engineering, and lifecycle management.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <div class="job">
+        <h3>Product Developer – Blue Marble</h3>
+        <div class="meta">June 2021 – Present | Ashland, OR</div>
+        <ul>
+          <li>Lead toy products through the full lifecycle from early concept to market launch.</li>
+          <li>Develop and maintain product specifications, BOMs, and tech packs to ensure cost and quality targets are met.</li>
+          <li>Collaborate cross-functionally with Creative, Industrial Design, Marketing, Sales, Compliance, and Executive teams.</li>
+          <li>Manage overseas manufacturing partners, development timelines, and margin-driven cost negotiations.</li>
+          <li>Oversee sample reviews, packaging artwork, testing compliance, and pre-production readiness.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Product Development – UA Brands</h3>
+        <div class="meta">January 2018 – May 2021 | Fort Lauderdale, FL</div>
+        <ul>
+          <li>Supported development of UA-branded apparel lines from concept through production.</li>
+          <li>Created and maintained product data in PLM systems including BOMs, trims, and materials.</li>
+          <li>Worked with vendors to ensure product accuracy, material consistency, and quality standards.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Assistant Buyer – Perry Ellis International</h3>
+        <div class="meta">July 2016 – December 2017 | Miami, FL</div>
+        <ul>
+          <li>Supported merchandising strategies, seasonal assortments, and margin goals.</li>
+          <li>Analyzed sales data to identify opportunities for improving inventory turns and performance.</li>
+          <li>Prepared reporting and visual tools to support planning and allocation teams.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Product Initiatives</h2>
+      <div class="projects">
+        <div class="project">
+          <div class="project-content">
+            <h3>Toy Product Launch</h3>
+            <p>Led end-to-end product development from early concept through market launch, including tech packs, cost engineering, overseas vendor coordination, and cross-functional alignment.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <h3>Packaging Review & Compliance</h3>
+            <p>Reviewed packaging artwork and collaborated with cross-functional teams to ensure alignment with testing requirements, licensor standards, and brand guidelines prior to production approval.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <h3>Sample Development & Approval</h3>
+            <p>Oversaw all stages of product sampling from early prototypes through pre-production, ensuring quality, functionality, and timeline adherence.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-content">
+            <h3>Cost Engineering & Margin Management</h3>
+            <p>Partnered with overseas manufacturers to negotiate costs, confirm final pricing, and meet margin expectations while maintaining product quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Product Gallery</h2>
+      <p class="summary">A selection of products developed from concept through launch, including collaboration with creative, engineering, overseas manufacturing, and cross-functional partners.</p>
+      <div class="projects">
+        <!-- Add or remove product cards as needed -->
+        <div class="project">
+          <img src="images/product-1.jpg" alt="Consumer product developed by Chandra Brown" />
+        </div>
+        <div class="project">
+          <img src="images/product-2.jpg" alt="Toy product developed from concept to launch" />
+        </div>
+        <div class="project">
+          <img src="images/product-3.jpg" alt="Packaged product developed for retail" />
+        </div>
+        <div class="project">
+          <img src="images/product-4.jpg" alt="Retail-ready product with packaging" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Product Development</h3>
+          <ul>
+            <li>Product lifecycle management</li>
+            <li>Cost engineering & margin optimization</li>
+            <li>Vendor & overseas manufacturer management</li>
+            <li>BOMs, tech packs, and specifications</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools & Systems</h3>
+          <ul>
+            <li>Centric PLM, GERBER Yunique PLM</li>
+            <li>Microsoft Excel, Word, Office</li>
+            <li>Google Docs</li>
+            <li>BOXI (Business Objects), Citrix</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>B.S. Clothing, Textiles & Merchandising</strong><br />Florida State University</p>
+    </section>
+
+    <footer>
+      <p>
+        <a href="mailto:chandra.a.brown@gmail.com">chandra.a.brown@gmail.com</a> ·
+        <a href="resume.pdf" target="_blank">Download Resume (PDF)</a>
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
